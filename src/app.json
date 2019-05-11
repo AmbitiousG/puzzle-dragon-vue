@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/index/main"
+    "pages/index/main",
+    "pages/awokenSkills/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "智龙迷城",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -20,10 +21,10 @@
       "iconPath": "static/tabs/home.png",
       "selectedIconPath": "static/tabs/home-active.png"
     },{
-      "text": "首页",
-      "pagePath": "pages/index/main",
-      "iconPath": "static/tabs/home.png",
-      "selectedIconPath": "static/tabs/home-active.png"
+      "text": "潜在觉醒",
+      "pagePath": "pages/awokenSkills/main",
+      "iconPath": "static/tabs/list.png",
+      "selectedIconPath": "static/tabs/list-active.png"
     }],
 
     "position": "bottom"
