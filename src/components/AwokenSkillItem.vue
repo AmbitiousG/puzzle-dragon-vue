@@ -3,7 +3,7 @@
     <div class="inner">
       <div class="first-row">
         <div class="icon">
-          <img :src="iconSrc">
+          <img :src="iconSrc" :class="highlight ? 'highlight' : ''" @click="setHighlight">
         </div>
         <div class="name">{{item.skill_name}}</div>
       </div>
@@ -20,9 +20,19 @@
 export default {
   name: "AwokenSkillItem",
   props: ["item"],
+  data() {
+    return {
+      highlight: false,
+    }
+  },
   computed: {
     iconSrc() {
       return `data:image/png;base64, ${this.item.skill_image_base64}`;
+    }
+  },
+  methods: {
+    setHighlight() {
+      this.highlight = !this.highlight;
     }
   }
 };
@@ -52,6 +62,10 @@ export default {
 img {
   width: 20px;
   height: 20px;
+  filter: grayscale(1);
+}
+img.highlight {
+  filter: none;
 }
 .name {
   flex: 1 1 auto;
